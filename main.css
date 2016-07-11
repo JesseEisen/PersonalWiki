@@ -12,6 +12,21 @@ h2{
   color: #000;
 }
 
+h2{
+  text-align: center;
+  font-size: 40px;
+  color: #0f7542;
+  font-family: "Helvetica Neue","Segoe UI","Oxygen","Ubuntu","Cantarell","Open Sans",sans-serif;
+}
+
+ul {
+ list-style: none;
+}
+
+ul li:before {
+ content: "\0BB \020";
+ }
+
 .header{
     background-color: #053b5f;
     color: white;
@@ -46,20 +61,35 @@ h2{
     font-size:24px;
     color: #000;
 }
+
+.content li p {
+  text-indent: inherit;
+  margin: 0;
+}
+
+.content ul {
+  padding-left: 1.2rem;
+}
+
+.content li {
+  font-family: 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: bold;
+  margin: 0.18rem 0;
+  line-height: 1.5;
+}
+
 .codes{
     margin-top: 0px;;
     margin-left:0px;
-    width: 40rem;
+    width: 50rem;
     height:auto;
-
-    /*border: 0.5px solid #bbb*/
 }
 
 .codes pre{
   display: block;
-  margin: 0 0 12px;
+  margin: 0;
   font-size: 0.8rem;
-  line-height: 1.4;
+  line-height: 1.2;
   overflow: auto;
   background-color: #f9f9f9;
   text-align: left;
@@ -82,8 +112,13 @@ hr {
 }
 
 .moredetial{
-    display: none
+    display: none;
 }
+
+.hidecontent{
+  display: none;
+}
+
 
 .showdetial{
     text-align: right;
@@ -93,17 +128,12 @@ hr {
     text-align: right;
 }
 
+
 a{
     text-decoration: none;
 }
 
-ul {
- list-style: none;
-}
 
-ul li:before {
- content: "\0BB \020";
- }
 
 * {
   -webkit-box-sizing: border-box;
