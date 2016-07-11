@@ -1,0 +1,116 @@
+body{
+    font-family: Roboto,-apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI","Oxygen","Ubuntu","Cantarell","Open Sans",sans-serif;
+    color:#333;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2{
+  text-align: left;
+  margin-left: 10px;
+  color: #000;
+}
+
+.header{
+    background-color: #053b5f;
+    color: white;
+}
+
+.header{
+    overflow: hidden;
+}
+
+.header h1{
+    font-family: Trebuchet MS,Helvetica Neue,Helvetica,Arial,sans-serif ;
+    text-align: center;
+    font-weight: normal;
+    font-size: 2.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    color: #FFF;
+}
+
+.content{
+    max-width:50rem;
+    margin: 3rem auto;
+    word-spacing: 0.04rem;
+    letter-spacing: -0.01rem;
+    line-height: 1.1;
+}
+.content h3{
+    padding-bottom: 3px;
+    margin-bottom:3px;
+    font-family: "Segoe UI","Oxygen",Trebuchet MS,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-size:24px;
+    color: #000;
+}
+.codes{
+    margin-top: 0px;;
+    margin-left:0px;
+    width: 40rem;
+    height:auto;
+
+    /*border: 0.5px solid #bbb*/
+}
+
+.codes pre{
+  display: block;
+  margin: 0 0 12px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  overflow: auto;
+  background-color: #f9f9f9;
+  text-align: left;
+  border:0.1px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+
+.codes code {
+    font-size: 11pt;
+    font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+    padding-left: 20px;
+}
+hr {
+    border-top: 1px dashed #bbb;
+    border-bottom: 1px dashed #fff;
+    margin: 0px;
+    padding: 0px;
+    color: green;
+}
+
+.moredetial{
+    display: none
+}
+
+.showdetial{
+    text-align: right;
+}
+
+.btm{
+    text-align: right;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul {
+ list-style: none;
+}
+
+ul li:before {
+ content: "\0BB \020";
+ }
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+
+
