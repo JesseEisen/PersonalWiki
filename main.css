@@ -99,9 +99,11 @@ ul li:before {
 
 
 .codes code {
+    display:inline-block;
     font-size: 11pt;
     font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
-    padding-left: 20px;
+    padding-top: 0px;
+    margin: 0px;
 }
 hr {
     border-top: 1px dashed #bbb;

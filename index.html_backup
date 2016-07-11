@@ -52,8 +52,6 @@
 if [ 1 -gt "$b" ]; then
 echo "$b"
 fi
-    </code>
-    <code>
 case xxx in 
   xx) 
       xxx
