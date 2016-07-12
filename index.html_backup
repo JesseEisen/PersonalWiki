@@ -29,20 +29,19 @@
     var x = y.nextSibling.nextSibling;
     if(x.style.display == 'none' || x.style.display == '')
     {
-       x.style.display = "block"; 
+       x.style.display = "block";
     }else{
        x.style.display = "none";
     }
-     
+
   }
-  
+
 </script>
 </head>
 <body>
 <div class="header">
-    <h1>Personal Wiki System</h1>
+    <h1> Bash Shell Wiki</h1>
 </div>
-<h2> Bash Shell Wiki</h2>
 <div class="content">
 <h3>If-Statement</h3>
 <p><b>if</b> is a shell keyword that executes a command (or a set of commands), and checks that command's exit code to see whether it was successful. Depending on that exit code, if executes a specific, different, block of commands.</p>
@@ -52,15 +51,6 @@
 if [ 1 -gt "$b" ]; then
 echo "$b"
 fi
-case xxx in 
-  xx) 
-      xxx
-      xxx
-      ;;
-  xx)
-      xxx
-      ;;
-esac
     </code>
 </pre>
 </div>
@@ -69,12 +59,12 @@ esac
 <div class="moredetial">
 <h4><a href="#" class="btn" onclick="showandhide(this);return false;">Associated Contents</a></h4>
 <div class="hidecontent">
-<p>There are some more condition for if, like:
+<p>There are some more condition for if, like:</p>
 <ul>
     <li>-f  file exsist?</li>
     <li>-n  file exsist?</li>
 </ul>
-</p>
+
 </div>
 <h4><a href="#" class="btn" onclick="showandhide(this);return false;">Some Reference Links</a></h4>
 <div class="hidecontent"> some links</div>
@@ -102,7 +92,7 @@ $ echo "'$USER', '$USERs', '${USER}s'"
 <ul>
     <li>${parameter:-word}  <b>Use Default Value</b></li>
     <li>${parameter:=word}  <b>Assign Default Value</b></li>
-    
+
 </ul>
 </p>
 <div class="btm">
