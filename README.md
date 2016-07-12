@@ -1,7 +1,7 @@
 This is my personalwiki system
 
 ## ScreenShot
-![imgs](page.png)
+![imgs](img/page.png)
 
 ## Introduction
 
