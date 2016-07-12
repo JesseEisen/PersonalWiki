@@ -11,6 +11,7 @@ class StringUtil
 	@@InListBlock = 0
 	@@NeedInsetEnd = 0
 	@@FirstCodeFlag = 0
+	@@FirstH3 = 0
 	def StringUtil.InsertDiv()
 		if @@NeedInsetEnd == 0
 			@@NeedInsetEnd = 1
@@ -27,6 +28,11 @@ class StringUtil
 	end
 
 	def InsertH3(line)
+		if @@FirstH3 == 0
+			@@FirstH3 = 1
+		else
+			$indexFile.puts "<hr>"
+		end
 		last=line.length-1
 		$indexFile.print "<h3>",line[3,last].chomp,"</h3>"
 		$indexFile.puts
