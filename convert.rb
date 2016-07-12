@@ -94,6 +94,16 @@ class StringUtil
 		end
 	end
 
+	def InsertLink(line)
+		descIdx = line.index(']')
+		desc=line[1,descIdx-1]
+		linksIdx = line.chomp.index(')') 
+		links=line[descIdx+2..linksIdx-1]
+		$indexFile.puts "<p>"
+		$indexFile.print '<a target="_blank" href="',links.chomp,'">',desc,"</a>"
+		$indexFile.puts '</p>'
+	end
+
 	def ResetParameter()
 		if @@InListBlock == 1
 			$indexFile.puts "</ul>"
@@ -141,6 +151,8 @@ def ParserFile(su)
 			su.InsertDirectly(line)
 		elsif line.include?("====") and line.index('=') == 0
 			su.ResetAll()
+		elsif line.include?("[") and line.index('[') == 0
+			su.InsertLink(line)
 		end
 	end
 end
