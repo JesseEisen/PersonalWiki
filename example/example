@@ -5,14 +5,14 @@
 >longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong
 
 ----
->case xx in
->   xx) 
->     xxx
->     ;;
->   xx)
->	  xxx
->	  ;;
-> esac
+case xx in
+   xx) 
+     xxx
+     ;;
+   xx)
+	  xxx
+	  ;;
+ esac
 ----
 
 Show
@@ -29,14 +29,14 @@ Reference
 Idioms
 >common things xxx
 ----
->case xx in
->   xx) 
->     xxx
->     ;;
->   xx)
->	  xxx
->	  ;;
-> esac
+case xx in
+   xx) 
+     xxx
+     ;;
+   xx)
+	  xxx
+	  ;;
+ esac
 ----
 
 Hide
@@ -47,14 +47,14 @@ Hide
 >longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong
 
 ----
->case xx in
->   xx) 
->     xxx
->     ;;
->   xx)
->	  xxx
->	  ;;
-> esac
+case xx in
+   xx) 
+     xxx
+    ;;
+   xx)
+	  xxx
+	  ;;
+ esac
 ----
 
 Show
@@ -70,14 +70,14 @@ Reference
 Idioms
 >common things xxx
 ----
->case xx in
->   xx) 
->     xxx
->     ;;
->   xx)
->	  xxx
->	  ;;
-> esac
+case xx in
+   xx) 
+     xxx
+     ;;
+   xx)
+	  xxx
+	  ;;
+ esac
 ----
 
 Hide
@@ -88,14 +88,14 @@ Hide
 >longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong
 
 ----
->case xx in
->   xx) 
->     xxx
->     ;;
->   xx)
->	  xxx
->	  ;;
-> esac
+case xx in
+   xx) 
+     xxx
+     ;;
+   xx)
+	  xxx
+	  ;;
+ esac
 ----
 
 Show
@@ -111,14 +111,14 @@ Reference
 Idioms
 >common things xxx
 ----
->case xx in
->   xx) 
->     xxx
->     ;;
->   xx)
->	  xxx
->	  ;;
-> esac
+case xx in
+   xx) 
+     xxx
+     ;;
+   xx)
+	  xxx
+	  ;;
+ esac
 ----
 
 Hide
@@ -129,14 +129,14 @@ Hide
 >longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong
 
 ----
->case xx in
->   xx) 
->     xxx
->     ;;
->   xx)
->	  xxx
->	  ;;
-> esac
+case xx in
+   xx) 
+     xxx
+     ;;
+   xx)
+	  xxx
+	  ;;
+ esac
 ----
 
 Show
@@ -152,14 +152,14 @@ Reference
 Idioms
 >common things xxx
 ----
->case xx in
->   xx) 
->     xxx
->     ;;
->   xx)
->	  xxx
->	  ;;
-> esac
+case xx in
+   xx) 
+     xxx
+     ;;
+   xx)
+	  xxx
+	  ;;
+ esac
 ----
 
 Hide

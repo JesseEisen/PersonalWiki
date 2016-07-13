@@ -6,11 +6,11 @@ $h4Front='<h4><a href="#" class="btn" onclick="showandhide(this);return false;">
 $hideDiv='<div class="hidecontent">'
 
 class StringUtil
-	@@InCodeBlock = 0
 	@@InParaBlock = 1  #if not code and list, that should be paragraph
 	@@InListBlock = 0
 	@@NeedInsetEnd = 0
 	@@FirstCodeFlag = 0
+	@@FirstH3 = 0
 	def StringUtil.InsertDiv()
 		if @@NeedInsetEnd == 0
 			@@NeedInsetEnd = 1
@@ -27,6 +27,11 @@ class StringUtil
 	end
 
 	def InsertH3(line)
+		if @@FirstH3 == 0
+			@@FirstH3 = 1
+		else
+			$indexFile.puts "<hr>"
+		end
 		last=line.length-1
 		$indexFile.print "<h3>",line[3,last].chomp,"</h3>"
 		$indexFile.puts
@@ -89,8 +94,15 @@ class StringUtil
 		if @@InParaBlock == 1
 	    	$indexFile.print "<p>",line[1,len].chomp, "</p>"
 			$indexFile.puts
-		else @@InCodeBlock == 1
-			$indexFile.puts line[1,len+1]
+		end
+	end
+
+	def InsertChose(line)
+		len = line.length-1
+		if @@FirstCodeFlag == 1
+			$indexFile.puts line[0,len+1]
+		else
+			p "error flog"
 		end
 	end
 
@@ -108,14 +120,12 @@ class StringUtil
 		if @@InListBlock == 1
 			$indexFile.puts "</ul>"
 		end
-		@@InCodeBlock = 0
 		@@InListBlock = 0
 		@@InParaBlock = 1
 	end
 
 	def ResetAll()
 		@@InParaBlock = 1
-		@@InCodeBlock = 0
 		@@InListBlock = 0
 		@@NeedInsetEnd = 0
 		@@FirstCodeFlag = 0
@@ -153,6 +163,8 @@ def ParserFile(su)
 			su.ResetAll()
 		elsif line.include?("[") and line.index('[') == 0
 			su.InsertLink(line)
+		else
+			su.InsertChose(line)
 		end
 	end
 end
