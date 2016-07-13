@@ -86,6 +86,7 @@ class StringUtil
 		else
 			$indexFile.puts '</code> </pre> </div>'
 			@@FirstCodeFlag = 0
+			@@InParaBlock = 1
 		end
 	end
 
@@ -116,12 +117,15 @@ class StringUtil
 		$indexFile.puts '</p>'
 	end
 
-	def ResetParameter()
+	def ResetParameter(line)
 		if @@InListBlock == 1
 			$indexFile.puts "</ul>"
 		end
+		if @@FirstCodeFlag == 1
+			$indexFile.puts line
+		end	
 		@@InListBlock = 0
-		@@InParaBlock = 1
+		@@InParaBlock == 1
 	end
 
 	def ResetAll()
@@ -153,7 +157,7 @@ def ParserFile(su)
 		elsif line.include?("+") and line.index('+') == 0
 			su.InsertList(line)
 		elsif line.length == 1
-			su.ResetParameter()
+			su.ResetParameter(line)
 			next
 		elsif line.include?("#") and line.index('#') == 0
 			su.InsertTitle(line)
