@@ -1,0 +1,168 @@
+body{
+    font-family: Roboto,-apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI","Oxygen","Ubuntu","Cantarell","Open Sans",sans-serif;
+    color:#333;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2{
+  text-align: left;
+  margin-left: 10px;
+  color: #000;
+}
+
+h2{
+  text-align: center;
+  font-size: 40px;
+  color: #0f7542;
+  font-family: "Helvetica Neue","Segoe UI","Oxygen","Ubuntu","Cantarell","Open Sans",sans-serif;
+}
+
+ul {
+ list-style: none;
+}
+
+ul li:before {
+ content: "\0BB \020";
+ }
+
+.header{
+    background-color: #053b5f;
+    color: white;
+}
+
+.header{
+    overflow: hidden;
+}
+
+.header h1{
+    font-family: Trebuchet MS,Helvetica Neue,Helvetica,Arial,sans-serif ;
+    text-align: center;
+    font-weight: normal;
+    font-size: 2.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    color: #FFF;
+}
+
+.content{
+    max-width:50rem;
+    margin: 3rem auto;
+    word-spacing: 0.04rem;
+    letter-spacing: -0.01rem;
+    line-height: 1.1;
+}
+.content h3{
+    padding-bottom: 3px;
+    margin-bottom:3px;
+    font-family: "Segoe UI","Oxygen",Trebuchet MS,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-size:24px;
+    color: #000;
+}
+
+.content h4{
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+}
+
+h4 > a{
+  color:#750120;
+}
+
+.content li p {
+  text-indent: inherit;
+  margin: 0;
+}
+
+.content ul {
+  padding-left: 1.2rem;
+}
+
+.content li {
+  font-family: 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: bold;
+  margin: 0.18rem 0;
+  line-height: 1.5;
+}
+
+.codes{
+    margin-top: 0px;;
+    margin-left:0px;
+    width: 50rem;
+    height:auto;
+}
+
+.codes pre{
+  display: block;
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  overflow: auto;
+  background-color: #f9f9f9;
+  text-align: left;
+  border:0.1px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+
+.codes code {
+    display:inline-block;
+    width:40rem;
+    font-size: 11pt;
+    font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+    padding-top: 0px;
+    margin: 0px;
+}
+hr {
+    border-top: 1px dashed #bbb;
+    border-bottom: 1px dashed #fff;
+    margin: 0px;
+    padding: 0px;
+    color: green;
+}
+
+.moredetial{
+    display: none;
+}
+
+.hidecontent{
+  display: none;
+}
+
+.hidecontent p{
+  text-indent:  20px;
+  padding: 2px ;
+  margin: 2px;
+}
+
+.hidecontent a{
+  color: #26a92b;
+  border-bottom: 1px dashed #f50064;
+}
+
+.showdetial{
+    text-align: right;
+}
+
+.btm{
+    text-align: right;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+
+
