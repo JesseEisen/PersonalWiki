@@ -1,6 +1,6 @@
 #!/usr/bin/env  ruby
 
-$indexFile = File.open("index.html","a+")
+$indexFile = File.open(ARGV[1],"a+")
 $file = File.open(ARGV[0],"r") 
 $h4Front='<h4><a href="#" class="btn" onclick="showandhide(this);return false;">'
 $hideDiv='<div class="hidecontent">'
