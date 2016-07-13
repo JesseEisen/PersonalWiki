@@ -62,6 +62,15 @@ ul li:before {
     color: #000;
 }
 
+.content h4{
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+}
+
+h4 > a{
+  color:#750120;
+}
+
 .content li p {
   text-indent: inherit;
   margin: 0;
@@ -122,6 +131,16 @@ hr {
   display: none;
 }
 
+.hidecontent p{
+  text-indent:  20px;
+  padding: 2px ;
+  margin: 2px;
+}
+
+.hidecontent a{
+  color: #26a92b;
+  border-bottom: 1px dashed #f50064;
+}
 
 .showdetial{
     text-align: right;
