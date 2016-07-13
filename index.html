@@ -79,9 +79,10 @@ getarg() {
 arg12="`getarg 12 "$@"`"
 </code> </pre> </div>
 <p>You should care about the usage of this function, most of that is the quotes.</p>
+<p></p>
+<p>3.use the Array</p>
 <div class="codes">
 <pre> <code>
-use the Array
 
 for x in "${@:(-2)}"  => get the last 2 parameters 
 for y in "${@:2}"     => staring at $2
