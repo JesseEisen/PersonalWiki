@@ -97,7 +97,6 @@ h4 > a{
 .codes pre{
   display: block;
   margin: 0;
-  font-size: 0.8rem;
   line-height: 1.2;
   overflow: auto;
   background-color: #f9f9f9;
@@ -110,7 +109,7 @@ h4 > a{
 .codes code {
     display:inline-block;
     width:40rem;
-    font-size: 11pt;
+    font-size: 0.8rem;
     font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
     padding-top: 0px;
     margin: 0px;
