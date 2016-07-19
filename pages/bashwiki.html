@@ -140,7 +140,7 @@ Example:
  i=$((j + 3))   <== arithmetic expansion, use the same syntax as C
 
  let a=17+23    <== arithmetic Commands
- let a=17 + 23  <== WRONG, should not do it
+ let a=17 + 23  <== WRONG, shouldn't do it
  let a=17 a+=32 <== Right
 
  ((a=$a+7))     <== right way
@@ -152,9 +152,12 @@ Example:
 <h4><a href="#" class="btn" onclick="showandhide(this);return false;">Associated Contents</a></h4>
 <div class="hidecontent">
 <p>1.let</p>
-<p>We should know that, if the expression evaluates to 0, the command is considered "false" and return 1.Otherwise, the command is considered "true" and return 0</p>
+<p></p>
+<p>We should know that, if the expression evaluates to 0, the command is considered "false" and return 1.</p>
+<p>Otherwise, the command is considered "true" and return 0</p>
 <p></p>
 <p>2.(())</p>
+<p></p>
 <p>This is used more widely than let, because it fits so well into an <b>if</b> or <b>while</b> command.</p>
 <p>Here are some example</p>
 <div class="codes">
@@ -165,15 +168,16 @@ Notice: if using set -e you may be unpleaseantly surprised when your program
 		abort because you assigned 0 to a number
 </code> </pre> </div>
 <p>3.Math Contexts</p>
+<p></p>
 <p> arithmetic also can used in <b>echo "${string:i+2:len-1}"</b></p>
+<p></p>
 <p><b>4.Leading zero and bash selection</b></p>
+<p></p>
 <div class="codes">
 <pre> <code>
-month=$(date +%m)
-next_month=$(( (month == 12)? 1 : month+1 ))
-<h1>bash: 09:value to great for base</h1>
-</div>
-<div class="content">
+ month=$(date +%m)
+ next_month=$(( (month == 12)? 1 : month+1 ))
+ #bash: 09:value to great for base
 </code> </pre> </div>
 <p>It treate 09 as an octet value. so there are some way to remove the leading zero</p>
 <div class="codes">
@@ -197,17 +201,16 @@ way4:
 <h4><a href="#" class="btn" onclick="showandhide(this);return false;">Some Idioms</a></h4>
 <div class="hidecontent">
 <p>Here is a function to convert number in other base to base 10</p>
+<p></p>
 <div class="codes">
 <pre> <code>
 frombase(){
 	echo "$(( $1#$2 ))"	
 }
 
-<h1>usage</h1>
-</div>
-<div class="content">
-frombase 16 ffe     <== 4094
-frombase 2  100100  <== 36
+ #usage
+ frombase 16 ffe     <== 4094
+ frombase 2  100100  <== 36
 </code> </pre> </div>
 </div>
 <div class="btm">
