@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My wiki</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" href="css/railscasts.css">
+<script src="js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+	<script type="text/javascript">
+function showdiv(obj)
+{
+	var x = obj.parentNode;
+	var y = x.nextSibling.nextSibling;
+	y.style.display = "block";
+	x.style.display = "none";
+}
+function hidediv(obj)
+{
+	var y = obj.parentNode.parentNode;
+	var x = y.previousSibling.previousSibling;
+	x.style.display = "block";
+	y.style.display = "none";
+}
+
+function showandhide(obj)
+{
+	var y = obj.parentNode;
+	var x = y.nextSibling.nextSibling;
+	if(x.style.display == 'none' || x.style.display == '')
+	{
+		x.style.display = "block"; 
+	}else{
+		x.style.display = "none";
+	}
+
+}
+
+</script>
+</head>
+<body>
+<div class="header">
+<h1>Bash Shell Wiki</h1>
+</div>
+<div class="content">
+<h3> Special Variables</h3>
+<p> There are some special variables in shell, Here is the most common variable</p>
+<p></p>
+<p>This two will be expanded to all positional parameters, by there are some difference:</p>
+<div class="codes">
+<pre> <code>
+ $@  => "$1" "$2" "$3"
+ $*  => "$1 $2 $3"
+</code> </pre> </div>
+<p>And you should notice the separated character, which decided by IFS</p>
+<p></p>
+<p>The next is the some useful parameters:</p>
+<div class="codes">
+<pre> <code>
+ $# =>  number of positional parameter
+ $$ =>  Expands to PID
+ $_ =>  Expands to last argument of the last command
+</code> </pre> </div>
+<p class="showdetial"><a class="clicks" href="#" onclick="showdiv(this);return false;">show more detials</a></p>
+<div class="moredetial">
+<h4><a href="#" class="btn" onclick="showandhide(this);return false;">Associated Contents</a></h4>
+<div class="hidecontent">
+<p><b>How to access positonal paramter after $9?</b></p>
+<p></p>
+<p>There are three ways:</p>
+<p> 1. use the ${10} to instead of $10</p>
+<p> 2. use the shift keyword to move that</p>
+<div class="codes">
+<pre> <code>
+getarg() {
+	shift $1 && echo "$1"	
+}
+
+arg12="`getarg 12 "$@"`"
+</code> </pre> </div>
+<p>You should care about the usage of this function, most of that is the quotes.</p>
+<p></p>
+<p>3.use the Array</p>
+<div class="codes">
+<pre> <code>
+
+for x in "${@:(-2)}"  => get the last 2 parameters 
+for y in "${@:2}"     => staring at $2
+
+</code> </pre> </div>
+</div>
+<h4><a href="#" class="btn" onclick="showandhide(this);return false;">Some References</a></h4>
+<div class="hidecontent">
+<p>Temperately nothing, waiting for complementing...</p>
+</div>
+<h4><a href="#" class="btn" onclick="showandhide(this);return false;">Some Idioms</a></h4>
+<div class="hidecontent">
+<p>You should always keep parameter expansions properly quoted</p>
+</div>
+<div class="btm">
+ <a href="#" class="btn" onclick="hidediv(this);">Hide Detials</a>
+</div>
+</div>
+<hr>
+<h3>Process Substitution</h3>
+<p>Allow you to pipe <b>stdout</b> of multiple commands, it can feeds theoutput of process into the stdin of another process</p>
+<div class="codes">
+<pre> <code>
+ >(command_list)
+ <(command_list)
+
+Example:
+  comm <(ls -l) <(ls -al)
+  diff <(ls $dir1) <(ls $dir2)
+</code> </pre> </div>
+<p class="showdetial"><a class="clicks" href="#" onclick="showdiv(this);return false;">show more detials</a></p>
+<div class="moredetial">
+<h4><a href="#" class="btn" onclick="showandhide(this);return false;">Some References</a></h4>
+<div class="hidecontent">
+<p>
+<a target="_blank" href="http://tldp.org/LDP/abs/html/process-sub.html">Advanced Bash Scripting Guide Chapter 23</a></p>
+<p>
+<a target="_blank" href="http://stackoverflow.com/a/164795">StackOverflow Answer of that</a></p>
+</div>
+<h4><a href="#" class="btn" onclick="showandhide(this);return false;">Associated Contents</a></h4>
+<div class="hidecontent">
+<p>Now you may want to figure out the <b>subshell</b> which is also so important and useful.</p>
+<p>some times we need to distingush both of them too.</p>
+<p>Also the Here string has the similar syntax. </p>
+</div>
+<div class="btm">
+ <a href="#" class="btn" onclick="hidediv(this);">Hide Detials</a>
+</div>
+</div>
+</div>
+</body>
+</html>
