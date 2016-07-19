@@ -3,9 +3,9 @@
 <head>
 <title>My wiki</title>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../css/main.css">
-<link rel="stylesheet" href="../css/railscasts.css">
-<script src="../js/highlight.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" href="css/railscasts.css">
+<script src="js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 	<script type="text/javascript">
 function showdiv(obj)
@@ -29,7 +29,7 @@ function showandhide(obj)
 	var x = y.nextSibling.nextSibling;
 	if(x.style.display == 'none' || x.style.display == '')
 	{
-		x.style.display = "block";
+		x.style.display = "block"; 
 	}else{
 		x.style.display = "none";
 	}
@@ -73,18 +73,18 @@ function showandhide(obj)
 <div class="codes">
 <pre> <code>
 getarg() {
-	shift $1 && echo "$1"
+	shift $1 && echo "$1"	
 }
 
 arg12="`getarg 12 "$@"`"
 </code> </pre> </div>
 <p>You should care about the usage of this function, most of that is the quotes.</p>
 <p></p>
-<p>3.use the Array</p>
+<p>use the Array</p>
 <div class="codes">
 <pre> <code>
 
-for x in "${@:(-2)}"  => get the last 2 parameters
+for x in "${@:(-2)}"  => get the last 2 parameters 
 for y in "${@:2}"     => staring at $2
 
 </code> </pre> </div>
@@ -127,6 +127,88 @@ Example:
 <p>Now you may want to figure out the <b>subshell</b> which is also so important and useful.</p>
 <p>some times we need to distingush both of them too.</p>
 <p>Also the Here string has the similar syntax. </p>
+</div>
+<div class="btm">
+ <a href="#" class="btn" onclick="hidediv(this);">Hide Detials</a>
+</div>
+</div>
+<hr>
+<h3>Arithmetic Expression</h3>
+<p>There are some ways to do arithmetic claculation in bash. Take a look:</p>
+<div class="codes">
+<pre> <code>
+ i=$((j + 3))   <== arithmetic expansion, use the same syntax as C
+
+ let a=17+23    <== arithmetic Commands
+ let a=17 + 23  <== WRONG, should not do it
+ let a=17 a+=32 <== Right
+
+ ((a=$a+7))     <== right way
+ ((a = a + 7))  <== also right
+
+</code> </pre> </div>
+<p class="showdetial"><a class="clicks" href="#" onclick="showdiv(this);return false;">show more detials</a></p>
+<div class="moredetial">
+<h4><a href="#" class="btn" onclick="showandhide(this);return false;">Associated Contents</a></h4>
+<div class="hidecontent">
+<p>1.let</p>
+<p>We should know that, if the expression evaluates to 0, the command is considered "false" and return 1.Otherwise, the command is considered "true" and return 0</p>
+<p></p>
+<p>2.(())</p>
+<p>This is used more widely than let, because it fits so well into an <b>if</b> or <b>while</b> command.</p>
+<p>Here are some example</p>
+<div class="codes">
+<pre> <code>
+if ((1)); then echo true; fi <== true
+
+Notice: if using set -e you may be unpleaseantly surprised when your program
+		abort because you assigned 0 to a number
+</code> </pre> </div>
+<p>3.Math Contexts</p>
+<p> arithmetic also can used in <b>echo "${string:i+2:len-1}"</b></p>
+<p><b>4.Leading zero and bash selection</b></p>
+<div class="codes">
+<pre> <code>
+month=$(date +%m)
+next_month=$(( (month == 12)? 1 : month+1 ))
+<h1>bash: 09:value to great for base</h1>
+</div>
+<div class="content">
+</code> </pre> </div>
+<p>It treate 09 as an octet value. so there are some way to remove the leading zero</p>
+<div class="codes">
+<pre> <code>
+way1:
+  while [[ $a = 0* ]]; do a=${a#0}; done
+
+way2:
+  shopt -s extglob
+  a=$(a##+(0))
+
+way3:
+  month=$(date +%m)
+  month=$((10#$month))
+
+way4:
+  a=008
+  let b=10#$a+1 
+</code> </pre> </div>
+</div>
+<h4><a href="#" class="btn" onclick="showandhide(this);return false;">Some Idioms</a></h4>
+<div class="hidecontent">
+<p>Here is a function to convert number in other base to base 10</p>
+<div class="codes">
+<pre> <code>
+frombase(){
+	echo "$(( $1#$2 ))"	
+}
+
+<h1>usage</h1>
+</div>
+<div class="content">
+frombase 16 ffe     <== 4094
+frombase 2  100100  <== 36
+</code> </pre> </div>
 </div>
 <div class="btm">
  <a href="#" class="btn" onclick="hidediv(this);">Hide Detials</a>
