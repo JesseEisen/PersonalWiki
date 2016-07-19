@@ -29,7 +29,7 @@ function showandhide(obj)
 	var x = y.nextSibling.nextSibling;
 	if(x.style.display == 'none' || x.style.display == '')
 	{
-		x.style.display = "block"; 
+		x.style.display = "block";
 	}else{
 		x.style.display = "none";
 	}
@@ -73,7 +73,7 @@ function showandhide(obj)
 <div class="codes">
 <pre> <code>
 getarg() {
-	shift $1 && echo "$1"	
+	shift $1 && echo "$1"
 }
 
 arg12="`getarg 12 "$@"`"
@@ -84,7 +84,7 @@ arg12="`getarg 12 "$@"`"
 <div class="codes">
 <pre> <code>
 
-for x in "${@:(-2)}"  => get the last 2 parameters 
+for x in "${@:(-2)}"  => get the last 2 parameters
 for y in "${@:2}"     => staring at $2
 
 </code> </pre> </div>
@@ -151,12 +151,12 @@ Example:
 <div class="moredetial">
 <h4><a href="#" class="btn" onclick="showandhide(this);return false;">Associated Contents</a></h4>
 <div class="hidecontent">
-<p>1.let</p>
+<h4>1.let</h4>
 <p></p>
 <p>We should know that, if the expression evaluates to 0, the command is considered "false" and return 1.</p>
 <p>Otherwise, the command is considered "true" and return 0</p>
 <p></p>
-<p>2.(())</p>
+<h4>2.(())</h4>
 <p></p>
 <p>This is used more widely than let, because it fits so well into an <b>if</b> or <b>while</b> command.</p>
 <p>Here are some example</p>
@@ -167,11 +167,11 @@ if ((1)); then echo true; fi <== true
 Notice: if using set -e you may be unpleaseantly surprised when your program
 		abort because you assigned 0 to a number
 </code> </pre> </div>
-<p>3.Math Contexts</p>
+<h4>3.Math Contexts</h4>
 <p></p>
 <p> arithmetic also can used in <b>echo "${string:i+2:len-1}"</b></p>
 <p></p>
-<p><b>4.Leading zero and bash selection</b></p>
+<h4><b>4.Leading zero and bash selection</b></h4>
 <p></p>
 <div class="codes">
 <pre> <code>
@@ -195,7 +195,7 @@ way3:
 
 way4:
   a=008
-  let b=10#$a+1 
+  let b=10#$a+1
 </code> </pre> </div>
 </div>
 <h4><a href="#" class="btn" onclick="showandhide(this);return false;">Some Idioms</a></h4>
@@ -205,7 +205,7 @@ way4:
 <div class="codes">
 <pre> <code>
 frombase(){
-	echo "$(( $1#$2 ))"	
+	echo "$(( $1#$2 ))"
 }
 
  #usage

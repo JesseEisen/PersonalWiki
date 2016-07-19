@@ -94,6 +94,8 @@ h4 > a{
     margin-left:0px;
     width: 50rem;
     height:auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .codes pre{
@@ -133,8 +135,8 @@ hr {
 }
 
 .hidecontent p{
-  text-indent:  20px;
-  padding: 2px ;
+  text-indent: 20px;
+  padding: 2px;
   margin: 2px;
 }
 
