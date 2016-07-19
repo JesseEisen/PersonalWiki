@@ -29,7 +29,7 @@ function showandhide(obj)
 	var x = y.nextSibling.nextSibling;
 	if(x.style.display == 'none' || x.style.display == '')
 	{
-		x.style.display = "block";
+		x.style.display = "block"; 
 	}else{
 		x.style.display = "none";
 	}
@@ -73,7 +73,7 @@ function showandhide(obj)
 <div class="codes">
 <pre> <code>
 getarg() {
-	shift $1 && echo "$1"
+	shift $1 && echo "$1"	
 }
 
 arg12="`getarg 12 "$@"`"
@@ -84,7 +84,7 @@ arg12="`getarg 12 "$@"`"
 <div class="codes">
 <pre> <code>
 
-for x in "${@:(-2)}"  => get the last 2 parameters
+for x in "${@:(-2)}"  => get the last 2 parameters 
 for y in "${@:2}"     => staring at $2
 
 </code> </pre> </div>
@@ -140,7 +140,7 @@ Example:
  i=$((j + 3))   <== arithmetic expansion, use the same syntax as C
 
  let a=17+23    <== arithmetic Commands
- let a=17 + 23  <== WRONG, shouldn't do it
+ let a=17 + 23  <== WRONG, should not do it
  let a=17 a+=32 <== Right
 
  ((a=$a+7))     <== right way
@@ -171,7 +171,7 @@ Notice: if using set -e you may be unpleaseantly surprised when your program
 <p></p>
 <p> arithmetic also can used in <b>echo "${string:i+2:len-1}"</b></p>
 <p></p>
-<h4><b>4.Leading zero and bash selection</b></h4>
+<h4>4.Leading zero and bash selection</h4>
 <p></p>
 <div class="codes">
 <pre> <code>
@@ -179,7 +179,9 @@ Notice: if using set -e you may be unpleaseantly surprised when your program
  next_month=$(( (month == 12)? 1 : month+1 ))
  #bash: 09:value to great for base
 </code> </pre> </div>
+<p></p>
 <p>It treate 09 as an octet value. so there are some way to remove the leading zero</p>
+<p></p>
 <div class="codes">
 <pre> <code>
 way1:
@@ -195,7 +197,7 @@ way3:
 
 way4:
   a=008
-  let b=10#$a+1
+  let b=10#$a+1 
 </code> </pre> </div>
 </div>
 <h4><a href="#" class="btn" onclick="showandhide(this);return false;">Some Idioms</a></h4>
@@ -205,7 +207,7 @@ way4:
 <div class="codes">
 <pre> <code>
 frombase(){
-	echo "$(( $1#$2 ))"
+	echo "$(( $1#$2 ))"	
 }
 
  #usage
