@@ -43,6 +43,18 @@ function showandhide(obj)
 <h1>Bash Shell Wiki</h1>
 </div>
 <div class="content">
+<h3> Some Great Tips</h3>
+<p> Here are some tips for bash script.</p>
+<p></p>
+<ul>
+<li> New scripts should not use echo. Use printf instead.</li>
+<li> Don't use the [ command in bash. Use [[ ... ]] to test strings and files, and ((...)) to test numbers.</li>
+<li> Many functions use variables that should've been declared local</li>
+<li> never use cd in a script without checking its exit status. You don't know what directory you ended up with now.</li>
+<p></p>
+<p></p>
+</ul>
+<hr>
 <h3> Special Variables</h3>
 <p> There are some special variables in shell, Here is the most common variable</p>
 <p></p>
@@ -65,22 +77,22 @@ function showandhide(obj)
 <div class="moredetial">
 <h4><a href="#" class="btn" onclick="showandhide(this);return false;">Associated Contents</a></h4>
 <div class="hidecontent">
-<p><b>How to access positonal paramter after $9?</b></p>
+<h4>How to access positonal paramter after $9?</h4>
 <p></p>
 <p>There are three ways:</p>
 <p> 1. use the ${10} to instead of $10</p>
 <p> 2. use the shift keyword to move that</p>
 <div class="codes">
 <pre> <code>
-getarg() {
-	shift $1 && echo "$1"	
-}
+ getarg() {
+	 shift $1 && echo "$1"	
+ }
 
-arg12="`getarg 12 "$@"`"
+ arg12="`getarg 12 "$@"`"
+ #You should care about the usage of this function, most of that is the quotes.
 </code> </pre> </div>
-<p>You should care about the usage of this function, most of that is the quotes.</p>
 <p></p>
-<p>use the Array</p>
+<p>3.use the Array</p>
 <div class="codes">
 <pre> <code>
 
@@ -125,8 +137,7 @@ Example:
 <h4><a href="#" class="btn" onclick="showandhide(this);return false;">Associated Contents</a></h4>
 <div class="hidecontent">
 <p>Now you may want to figure out the <b>subshell</b> which is also so important and useful.</p>
-<p>some times we need to distingush both of them too.</p>
-<p>Also the Here string has the similar syntax. </p>
+<p>some times we need to distingush both of them too.Also the Here string has the similar syntax. </p>
 </div>
 <div class="btm">
  <a href="#" class="btn" onclick="hidediv(this);">Hide Detials</a>
