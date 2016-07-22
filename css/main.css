@@ -101,6 +101,7 @@ h4 > a{
 .codes pre{
   display: block;
   margin: 0;
+  width:50rem;
   line-height: 1.2;
   overflow: auto;
   background-color: #f9f9f9;
@@ -112,7 +113,8 @@ h4 > a{
 
 .codes code {
     display:inline-block;
-    width:50rem;
+    width:45rem;
+	font-size: 14px;
     font-size: 0.8rem;
     font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
     padding-top: 0px;
@@ -159,7 +161,8 @@ a{
 }
 
 p{
-	font-size: 0.875rem;
+	font-size: 16px;
+	font-size: 1rem;
 }
 
 * {
