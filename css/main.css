@@ -112,7 +112,7 @@ h4 > a{
 
 .codes code {
     display:inline-block;
-    width:40rem;
+    width:50rem;
     font-size: 0.8rem;
     font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
     padding-top: 0px;
@@ -158,7 +158,9 @@ a{
     text-decoration: none;
 }
 
-
+p{
+	font-size: 0.875rem;
+}
 
 * {
   -webkit-box-sizing: border-box;
